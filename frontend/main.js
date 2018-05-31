@@ -1,5 +1,8 @@
 import Vue from 'vue'
 import App from './App.vue'
+import Buefy from 'buefy'
+
+Vue.use(Buefy)
 
 // eslint-disable-next-line no-new
 new Vue({

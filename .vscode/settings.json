@@ -1,0 +1,11 @@
+{
+    "python.pythonPath": "C:\\Users\\msp\\AppData\\Local\\conda\\conda\\envs\\django-vue\\python.exe",
+
+    "python.autoComplete.extraPaths": [
+      "C:\\Users\\msp\\AppData\\Local\\conda\\conda\\envs\\django-vue\\Lib\\site-packages\\"
+    ],
+
+    "editor.tabCompletion": true
+
+} 
+

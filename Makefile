@@ -17,6 +17,12 @@ dev:
 run:
 	npm run dev & python ./manage runserver
 
+
+# Runs development server from the production build.
+# This step depends on `make prod`, however dependency is excluded to speed up dev server startup.
+runprod:
+	python manage runserver --insecure
+
 # Creates migrations and migrates database.
 # This step depends on `make dev`, however dependency is excluded to speed up dev server startup.
 migrate:
@@ -32,6 +38,14 @@ clean:
 	rm -rf node_modules
 	rm -rf static/dist
 
+# Cleans up folder by removing virtual environment, node modules and generated files.
+cleandist:
+	rm -rf static/dist
+
 # Run linter
 lint:
 	@npm run lint --silent
+
+# Startup Dev-Env
+startup:
+	activate django-vue
