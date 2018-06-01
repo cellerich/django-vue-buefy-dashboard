@@ -1,10 +1,7 @@
 .aside {
-background: #2e363f;
-padding: 2em 0.2em 0 1em;
+padding: 2em 0.2em 0 1.5em;
 }
-.aside a {
-color: #afb8c3;
-}
+
 .aside .menu-list li {
-margin-top: 0.5em;
+margin-top: 0.3em;
 }

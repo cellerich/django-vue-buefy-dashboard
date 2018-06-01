@@ -8,17 +8,66 @@
 @import "./bulma/sass/utilities/_all";
 // @import "_all";
 
+// Set the default fonts
+// font-family: 'Open Sans', sans-serif;
+// font-family: 'Roboto', sans-serif;
+$family-sans-serif: 'Open Sans', sans-serif;
+$family-primary: $family-sans-serif;
 
 // Set your colors
-$primary: #196bd6;
+$primary: #659DBD;
 $primary-invert: findColorInvert($primary);
-$twitter: #ffcb9a;
-$twitter-invert: findColorInvert($twitter);
-$danger: #df5b0f;
+$info: #4887B0;
+$info-invert: findColorInvert($info);
+$success: #85DCCB;
+$success-invert: findColorInvert($success);
+$warning: #E8A87C;
+$warning-invert: findColorInvert($warning);
+$danger: #E27D60;
 $danger-invert: findColorInvert($danger);
 
+// Set own color variables
+$theme-one: #8D8741;
+$theme-one-invert: findColorInvert($theme-one);
+$theme-two: #659DBD;
+$theme-two-invert: findColorInvert($theme-two);
+$theme-three: #DAAD86;
+$theme-three-invert: findColorInvert($theme-three);
+$theme-four: #BC986A;
+$theme-four-invert: findColorInvert($theme-four);
+$theme-five: #FBEEC1;
+$theme-five-invert: findColorInvert($theme-five);
+
+
+// manage the menu colors
+$menu-item-color: $theme-five;
+$menu-item-hover-color: $theme-five-invert;
+$menu-item-hover-background-color: $theme-five;
+$menu-item-active-color: $theme-three-invert;
+$menu-item-active-background-color: $theme-three;
+$menu-label-color: $white;
+
+
+// default colors for title and subtitles
+$title-color: $theme-four;
+$subtitle-color: $theme-three;
+
+// manage the navbar colors
+$navbar-background-color: $theme-two;
+
+$navbar-dropdown-background-color: $theme-two;
+
+$navbar-dropdown-item-hover-color: $theme-five-invert;
+$navbar-dropdown-item-hover-background-color: $theme-five;
+
+$navbar-dropdown-item-active-color: $theme-three-invert;
+$navbar-dropdown-item-active-background-color: $theme-three;
+
+$navbar-divider-background-color: $theme-five;
+
+
 // Setup $colors to use as bulma classes (e.g. 'is-twitter')
-$colors: (
+$addColors: (
     "white": ($white, $black),
     "black": ($black, $white),
     "light": ($light, $light-invert),
@@ -28,8 +77,14 @@ $colors: (
     "success": ($success, $success-invert),
     "warning": ($warning, $warning-invert),
     "danger": ($danger, $danger-invert),
-    "twitter": ($twitter, $twitter-invert)
+    "theme-one": ($theme-one, $theme-one-invert),
+    "theme-two": ($theme-two, $theme-two-invert),
+    "theme-three": ($theme-three, $theme-three-invert),
+    "theme-four": ($theme-four, $theme-four-invert),
+    "theme-five": ($theme-five, $theme-five-invert)
 );
+
+$colors: map-merge($colors, $addColors);
 
 // Links
 $link: $primary;

@@ -26,10 +26,10 @@ export default {
 .main {
   padding: 2em 1em 0;
 }
-.menu-label {
+/* .menu-label {
   color: #00d1b2;
   margin-left: 0.5em;
-}
+} */
 .block {
   margin-top: 0.5em;
 }

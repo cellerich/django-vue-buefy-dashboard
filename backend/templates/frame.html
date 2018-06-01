@@ -17,7 +17,7 @@
     <!-- NAVBAR                       -->
     <!-- ############################ -->
 
-    <nav class="navbar" role="navigation" aria-label="main navigation">
+    <nav class="navbar has-background-theme-two" role="navigation" aria-label="main navigation">
 
         <!-- ### Brand Icon or Text -->   
         <div class="navbar-brand">
@@ -54,7 +54,7 @@
                         <figure class="image is-32x32" style="margin-right:.5em;">
                             <img src="https://avatars2.githubusercontent.com/u/13665468?s=32&v=4">
                         </figure>
-                        <p class="is-size-4">Cello</p>
+                        <p class="is-size-4">{{ user.username }}</p>
                     </a>
 
                     <div class="navbar-dropdown is-right">
@@ -76,38 +76,45 @@
         <!-- SIDEBAR                      -->
         <!-- ############################ -->
 
+        <aside class="menu column is-2 aside has-background-theme-two">
+            <p class="menu-label">
+                General
+            </p>
+            <ul class="menu-list">
+                <li><a class="is-active" href="#"><span class="icon is-small"><i class="fa fa-tachometer"></i></span>  - Dashboard</a></li>
+                <li><a href="#"><span class="icon is-small"><i class="fa fa-users"></i></span>  - Customers</a></li>
+                <li><a href="#"><span class="icon is-small"><i class="fa fa-archive"></i></span>  - Products</a></li>
+            </ul>
+            <p class="menu-label">
+                Transactions
+            </p>
+            <ul class="menu-list">
+                <li><a href="#"><span class="icon is-small"><i class="fa fa-money"></i></span>  - Payments</a></li>
+                <li><a href="#"><span class="icon is-small"><i class="fa fa-credit-card"></i></span>  - Transfer</a></li>
+                <li><a href="#"><span class="icon is-small"><i class="fa fa-balance-scale"></i></span>  - Balance</a></li>
+            </ul>
 
-        <aside class="column is-2 aside">
-            <nav class="menu">
-                <p class="menu-label">General</p>
-                <ul class="menu-list">
-                <li><a class="is-active" href="#"><span class="icon is-small"><i class="fa fa-tachometer"></i></span>  Dashboard</a></li>
-                </ul>
+            
+            {% if user.is_staff %}
 
-
-                <p class="menu-label">Portfolio Data</p>
-                <ul class="menu-list">
-                <li><a href="#"><span class="icon is-small"><i class="fa fa-pencil-square-o"></i></span>  Exchanges</a></li>
-                <li><a href="#"><span class="icon is-small"><i class="fa fa-desktop"></i></span>  Wallets</a></li>
-                <li><a href="#"><span class="icon is-small"><i class="fa fa-table"></i></span>  Coins</a></li>
-                </ul>
-
-
-                <p class="menu-label">Administration</p>
-                <ul class="menu-list">
-                <li><a><span class="icon is-small"><i class="fa fa-bug"></i></span>  Exchanges</a></li>
-                <li><a><span class="icon is-small"><i class="fa fa-windows"></i></span>  Wallets</a></li>
-                <li><a><span class="icon is-small"><i class="fa fa-laptop"></i></span>  Coins</a></li>
+            <p class="menu-label">
+                Administration
+            </p>
+            <ul class="menu-list">
+                <li><a href="../admin">Administration</a></li>
                 <li>
-                    <a class=""><i class="fa fa-cog"></i>  User Administration</a>
-                    <ul>
-                    <li><a>Member List</a></li>
+                <a>Manage Your Team</a>
+                <ul>
+                    <li><a>Members</a></li>
+                    <li><a>Plugins</a></li>
                     <li><a>Add a member</a></li>
-                    </ul>
-                </li>
-
                 </ul>
-            </nav>
+                </li>
+            </ul>
+
+
+            {% endif %}
+                
         </aside>
 
         <!-- MAIN Block filled with VUE   -->

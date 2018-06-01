@@ -12,42 +12,15 @@ margin-left: 10px;
     margin-left: -2px;
 }
 }
-.navbar {
-background: #2e363f;
-}
-.navbar-item {
-background-color: #2e363f;
-color: #afb8c3 !important;
-}
-.navbar-item.is-active,
-.navbar-item:hover {
-background-color: #116466 !important;
-color: #363636 !important;
-}
-.navbar .is--brand:hover {
-background-color: #2e363f !important;
-}
 .navbar-brand-logo {
 max-height: 3rem !important;
 border-radius: 0.25em;
 padding: 0.25em;
 }
-.navbar-brand-logo,
-.navbar-dropdown .navbar-item {
-background-color: #fff;
-}
 .navbar-burger {
-background-color: #2e363f !important;
 border: 0;
-}
-.navbar-burger span {
-background-color: #00d1b2;
 }
 .navbar-link figure img {
 border-radius: 50%;
 max-height: 2em;
-}
-
-.navbar-link p {
-    color: #D9B08C
 }
