@@ -1,6 +1,6 @@
-# django-vue-buefy-dasboard
+# django-vue-buefy-dashboard
 
-This is a boilerplate project for setting up a Dasboard based on the following frameworks:
+This is a boilerplate project for setting up a Dashboard based on the following frameworks:
 - Django as a backend with all the basic admin stuff included
 - Vue.js as the frontend
 - Buefy as the Vue.js components to use

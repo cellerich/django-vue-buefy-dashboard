@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+
+{% load staticfiles%}
+
+{% block head %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/login.css' %}">
+    
+{% endblock head %}
+
+
+
+{% block content %}
+
+    <section class="hero is-success is-fullheight">
+        <div class="hero-body">
+            <div class="container has-text-centered">
+                <div class="column is-4 is-offset-4">
+                    <h3 class="title has-text-grey">Login</h3>
+                    <p class="subtitle has-text-grey">Please login to proceed.</p>
+                    <div class="box">
+                        <figure class="avatar">
+                            <img src="{% static 'images/avatar.png' %}">
+                        </figure>
+                        <form id="login-form" method="POST" action="{% url 'login' %}">
+                            {% csrf_token %}
+                            <div class="field">
+                                <div class="control">
+                                    <input id="id_username" name="username" class="input is-large" placeholder="Your Username" autofocus="">
+                                </div>
+                            </div>
+
+                            <div class="field">
+                                <div class="control">
+                                    <input id="id_password" name="password" class="input is-large" type="password" placeholder="Your Password">
+                                </div>
+                            </div>
+
+                            {% if form.errors %}
+                            <div class="notification is-danger">Username and Password not recognized</div>
+                            {% endif %}
+                            <input type="submit" value="Login" class="button is-block is-info is-large is-fullwidth" />
+                            <input type="hidden" name="next" value="{{ next }}" />
+                        </form>
+                    </div>
+                    <p class="has-text-grey">
+                        <a href="../">Sign Up</a> &nbsp;·&nbsp;
+                        <a href="../">Forgot Password</a> &nbsp;·&nbsp;
+                        <a href="../">Need Help?</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+{% endblock content %}
+    
+

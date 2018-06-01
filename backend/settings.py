@@ -36,8 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'sass_processor',
     'webpack_loader',
-    'backend'
+    'backend',
 ]
 
 MIDDLEWARE = [
@@ -98,6 +99,15 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+
+# Redirects after Login / Logout
+# https://docs.djangoproject.com/en/2.0/ref/settings/#std:setting-LOGIN_REDIRECT_URL
+
+LOGOUT_REDIRECT_URL = '/'
+LOGIN_REDIRECT_URL = '/'
+LOGIN_URL = '/login'
+
+
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
@@ -116,6 +126,26 @@ STATIC_ROOT = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+
+STATICFILES_FINDERS = [
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'sass_processor.finders.CssFinder',
+]
+
+# SASS Preprocessor settings
+# https://github.com/jrief/django-sass-processor
+
+
+# SASS_PROCESSOR_INCLUDE_FILE_PATTERN = r'^.+\.sass$'
+
+SASS_PROCESSOR_INCLUDE_DIRS = [
+     os.path.join(BASE_DIR, 'node_modules'),
+     os.path.join(BASE_DIR, 'node_modules/bulma'),
+     os.path.join(BASE_DIR, 'node_modules/buefy/src/scss'),
+ ]
+
+SASS_OUTPUT_STYLE = 'compact'
 
 WEBPACK_LOADER = {
     'DEFAULT': {

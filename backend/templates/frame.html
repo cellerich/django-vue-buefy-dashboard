@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+
+{% load staticfiles%}
+
+{% block head %}
+
+    <link rel="stylesheet" type="text/css" href="{% static 'css/navbar.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/sidebar.css' %}">
+    
+{% endblock head %}
+
+
+    
+
+{% block content %}
+
+    <!-- NAVBAR                       -->
+    <!-- ############################ -->
+
+    <nav class="navbar" role="navigation" aria-label="main navigation">
+
+        <!-- ### Brand Icon or Text -->   
+        <div class="navbar-brand">
+            <a class="navbar-item is-size-3" href="#">
+                <p>DVB - Dashboard</p>
+            </a>
+
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <!-- ### Navbar Menu Items -->   
+        <div class="navbar-menu">
+            <!-- ### Navbar Menu Items on the left side-->   
+            <div class="navbar-start">
+                <!-- navbar items -->
+            </div>
+
+            <!-- ### Navbar Menu Items on the right side -->   
+            <div class="navbar-end">
+                <!-- navbar items -->
+
+                <a class="navbar-item nav-tag">
+                    <span class="icon is-small">
+                    <i class="fa fa-envelope-o"></i>
+                    </span>
+                    <span class="tag is-danger tag-notif">9</span>
+                </a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link is-size-4">
+                        <figure class="image is-32x32" style="margin-right:.5em;">
+                            <img src="https://avatars2.githubusercontent.com/u/13665468?s=32&v=4">
+                        </figure>
+                        <p class="is-size-4">Cello</p>
+                    </a>
+
+                    <div class="navbar-dropdown is-right">
+                        <a class="navbar-item"><span class="icon is-small"><i class="fa fa-user-o"></i></span>&nbsp;Profile</a>
+                        <hr class="navbar-divider">
+                        <a href="/logout" class="navbar-item"><span class="icon is-small"><i class="fa fa-power-off"></i></span>&nbsp;Logout</a>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="columns">
+
+        <!-- SIDEBAR                      -->
+        <!-- ############################ -->
+
+
+        <aside class="column is-2 aside">
+            <nav class="menu">
+                <p class="menu-label">General</p>
+                <ul class="menu-list">
+                <li><a class="is-active" href="#"><span class="icon is-small"><i class="fa fa-tachometer"></i></span>  Dashboard</a></li>
+                </ul>
+
+
+                <p class="menu-label">Portfolio Data</p>
+                <ul class="menu-list">
+                <li><a href="#"><span class="icon is-small"><i class="fa fa-pencil-square-o"></i></span>  Exchanges</a></li>
+                <li><a href="#"><span class="icon is-small"><i class="fa fa-desktop"></i></span>  Wallets</a></li>
+                <li><a href="#"><span class="icon is-small"><i class="fa fa-table"></i></span>  Coins</a></li>
+                </ul>
+
+
+                <p class="menu-label">Administration</p>
+                <ul class="menu-list">
+                <li><a><span class="icon is-small"><i class="fa fa-bug"></i></span>  Exchanges</a></li>
+                <li><a><span class="icon is-small"><i class="fa fa-windows"></i></span>  Wallets</a></li>
+                <li><a><span class="icon is-small"><i class="fa fa-laptop"></i></span>  Coins</a></li>
+                <li>
+                    <a class=""><i class="fa fa-cog"></i>  User Administration</a>
+                    <ul>
+                    <li><a>Member List</a></li>
+                    <li><a>Add a member</a></li>
+                    </ul>
+                </li>
+
+                </ul>
+            </nav>
+        </aside>
+
+        <!-- MAIN Block filled with VUE   -->
+        <!-- ############################ -->
+
+
+        {% block main %}
+            
+        {% endblock main %}
+
+    </div>
+
+
+{% endblock content %}

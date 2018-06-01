@@ -32,15 +32,19 @@ migrate:
 # Builds files for distribution which will be placed in /static/dist
 build: prod migrate
 	npm run build
+	python ./manage compilescss
+	python ./manage collectstatic --ignore=*.scss
 
 # Cleans up folder by removing virtual environment, node modules and generated files.
 clean:
 	rm -rf node_modules
 	rm -rf static/dist
+	python ./manage compilescss --delete-files
 
 # Cleans up folder by removing virtual environment, node modules and generated files.
 cleandist:
 	rm -rf static/dist
+	python ./manage compilescss --delete-files
 
 # Run linter
 lint:

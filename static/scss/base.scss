@@ -1,0 +1,41 @@
+// This is the place to configure our variables to use with the bulma css framework
+// more info about the possible variables are found here: 
+// - https://bulma.io/documentation/overview/customize/
+// - https://bulma.io/documentation/overview/variables/
+
+
+// Import Bulma's core
+@import "./bulma/sass/utilities/_all";
+// @import "_all";
+
+
+// Set your colors
+$primary: #196bd6;
+$primary-invert: findColorInvert($primary);
+$twitter: #ffcb9a;
+$twitter-invert: findColorInvert($twitter);
+$danger: #df5b0f;
+$danger-invert: findColorInvert($danger);
+
+// Setup $colors to use as bulma classes (e.g. 'is-twitter')
+$colors: (
+    "white": ($white, $black),
+    "black": ($black, $white),
+    "light": ($light, $light-invert),
+    "dark": ($dark, $dark-invert),
+    "primary": ($primary, $primary-invert),
+    "info": ($info, $info-invert),
+    "success": ($success, $success-invert),
+    "warning": ($warning, $warning-invert),
+    "danger": ($danger, $danger-invert),
+    "twitter": ($twitter, $twitter-invert)
+);
+
+// Links
+$link: $primary;
+$link-invert: $primary-invert;
+$link-focus-border: $primary;
+
+// Import Bulma and Buefy styles
+@import "bulma";
+@import "buefy";

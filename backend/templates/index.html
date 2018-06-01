@@ -1,17 +1,12 @@
-<!DOCTYPE html>
+{% extends 'frame.html' %}
 {% load render_bundle from webpack_loader %}
-<html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=7">
-    <title>buefy-simple</title>
-    <link rel="stylesheet" href="//fonts.googleapis.com/icon?family=Material+Icons">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
-  <!-- <body class="has-navbar-fixed-top">
-  <body> -->
+
+
+{% block main %}
+
     <div id="app"></div>
     <!-- built files will be auto injected -->
     {% render_bundle 'main' %}
-  </body>
-</html>
+
+{% endblock main %}
+  
