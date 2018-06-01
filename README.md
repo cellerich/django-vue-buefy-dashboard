@@ -6,9 +6,11 @@ This is a boilerplate project for setting up a Dashboard based on the following 
 - Buefy as the Vue.js components to use
 - Bulma as the css framework where Buefy is based on
 
+![Dashboard Image](docs/screenshots/dashboard.png)
+
 ## Work in Progress
 **Beware!** This is a work in progress and may not be reliable working right now. The following elements will be added in the (hopefully) near future:
-- [ ] Custom Login Page
+- [X] Custom Login Page
 - [ ] Custom User Profile Page with extended user attributes
 - [ ] Custom Sign-Up Page
 - [ ] Password Reset and E-Mail verification functionality
