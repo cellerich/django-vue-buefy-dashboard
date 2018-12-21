@@ -30,6 +30,11 @@ and of course the frameworks in use
 - https://vuejs.org/
 
 
+### Prerequisites
+- install nmp
+- install python > 3.6 (i did trough Conda)
+- make a virtual environment (`conda activate xyz`)
+
 ### Features
 *shamelessly copied from [rokups](https://github.com/rokups)*
 
@@ -42,7 +47,7 @@ and of course the frameworks in use
 
 ### Development environment setup
 
-make sure to setup a virtual environment for python (I called mine "django-vue"), then we can activate it with the following make command
+When you generated a virtual environment for python (I called mine "django-vue"), then you can activate it with the following make command (edit `Makefile` for your environment)
 
 ```bash
 make startup
@@ -54,6 +59,11 @@ These steps will install all required dependencies including development ones, r
 make dev
 make migrate
 make run
+```
+
+Dont forget after the first run to create a superuser
+```bash
+python manage createsuperuser
 ```
 
 ### Deployment
